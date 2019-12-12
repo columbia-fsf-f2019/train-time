@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Train Time</title>
+    <!-- Bootstrap reference -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!-- jQuery reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase References -->
+
+    <!-- Moment.js reference -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   </head>
   <body>
     <!-- begin by wrapping everything in a container, JUMBOTRON within -->
@@ -20,7 +29,7 @@
         style="background-color: maroon; color: white; text-align: center;"
       >
         <h1>Anytime is Train Time</h1>
-        <h3>Choo Choo. Chee Chee.</h3>
+        <h3>SOUL TRAIN!</h3>
       </div>
 
       <!-- CARD below contains a TABLE with categories at the top of each column -->
@@ -29,7 +38,7 @@
           class="card-header"
           style="background-color: #007bff; color: #ffffff;"
         >
-          Current Train Schedule
+          CURRENT TRAIN SCHEDULE
         </div>
         <div class="card-body">
           <table class="table">
@@ -42,7 +51,7 @@
                 <th scope="col">Minutes Away</th>
               </tr>
             </thead>
-            <!-- <tbody></tbody> -->
+            <tbody></tbody>
           </table>
         </div>
       </div>
@@ -53,7 +62,7 @@
           class="card-header"
           style="background-color: #007bff; color: #ffffff;"
         >
-          Add Train
+          ADD TRAIN
         </div>
         <div class="card-body">
           <form>
@@ -82,5 +91,8 @@
         </div>
       </div>
     </div>
+
+    <!-- JavaScript -->
+    <script src="trainTime.js"></script>
   </body>
 </html>
