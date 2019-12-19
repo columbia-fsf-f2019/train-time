@@ -5,21 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Train Time</title>
-    <!-- Bootstrap reference -->
+    <!-- BOOTSTRAP CSS reference -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <!-- jQuery reference -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Firebase References -->
+    <!-- BOOTSTRAP JS reference -->
 
-    <!-- Moment.js reference -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   </head>
   <body>
     <!-- begin by wrapping everything in a container, JUMBOTRON within -->
@@ -28,8 +23,8 @@
         class="jumbotron"
         style="background-color: maroon; color: white; text-align: center;"
       >
-        <h1>Anytime is Train Time</h1>
-        <h3>SOUL TRAIN!</h3>
+        <h1>It's Train Time!!</h1>
+        <h3>Step onto the SOUL TRAIN!</h3>
       </div>
 
       <!-- CARD below contains a TABLE with categories at the top of each column -->
@@ -78,7 +73,7 @@
               <label for="train-time-input"
                 >First Train Time (HH:mm - military time)</label
               >
-              <input type="date" class="form-control" id="train-time-input" />
+              <input type="time" class="form-control" id="train-time-input" />
             </div>
             <div class="form-group">
               <label for="frequency-input">Frequency (min)</label>
@@ -93,6 +88,18 @@
     </div>
 
     <!-- JavaScript -->
+
+    <!-- jQuery reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- FIREBASE References -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- Moment.js reference -->
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="trainTime.js"></script>
   </body>
 </html>
