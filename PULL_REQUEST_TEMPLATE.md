@@ -1,11 +1,11 @@
 ## Description
 
-Add a description of work completed here, including a screenshot or brief gif
+HTML, CSS completed.  Firebase database setup complete.
 
 ## Known issues
 
-Call out any known issues or bugs, including the steps required to reproduce each issue
+Couldn't calculate arrival time or minutes away using moment.js
 
 ## Follow up items
 
-How could you improve and iterate upon this work given more time What was difficult? What went well?
+-[] Debug code currently commented out 

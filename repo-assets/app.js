@@ -14,20 +14,20 @@ $(() => {
       firebase.initializeApp(firebaseConfig);
       var db = firebase.database();
 
-      var newTrainName;
-      var newDestination;
-      var newTrainTime;
-      var newFrequency; 
+    //   var newTrainName;
+    //   var newDestination;
+    //   var newTrainTime;
+    //   var newFrequency; 
 
-    function nextTrain(newTrainTime) { 
-        var timeDiff = moment().diff(moment(newTrainTime, "minutes"));
-        var timeRemainder = timeDiff % newFrequency;
-        var minutesAway = newFrequency - timeRemainder;
-        var nextTrain = moment().add(minutesAway, "minutes");
-        nextTrain = moment(nextTrain).format("hh:mm A");
+    // function nextTrain(newTrainTime) { 
+    //     var timeDiff = moment().diff(moment(newTrainTime, "minutes"));
+    //     var timeRemainder = timeDiff % newFrequency;
+    //     var minutesAway = newFrequency - timeRemainder;
+    //     var arrivingTrain = moment().add(minutesAway, "minutes");
+    //     arrivingTrain = moment(arrivingTrain).format("hh:mm A");
 
     
-    };
+    // };
 
     
     $("#add-train-data").click((e) => {
@@ -37,15 +37,15 @@ $(() => {
         newTrainTime = $("#train-time").val().trim();
         newFrequency = $("#frequency").val().trim();
         
-        nextTrain();
+        // nextTrain();
 
             var newTrain = {
             train: newTrainName,
             trainTime: newTrainTime,
             destination: newDestination,
             frequency: newFrequency,
-            nextTrain,
-            minutesAway
+            // arrivingTrain
+            
         };
 
         db.ref().push(newTrain);
