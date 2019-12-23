@@ -13,8 +13,16 @@
       crossorigin="anonymous"
     />
 
-    <!-- BOOTSTRAP JS reference -->
+    <!-- jQuery Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- FIREBASE Reference -->
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- MOMENT.js reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </head>
   <body>
     <!-- begin by wrapping everything in a container, JUMBOTRON within -->
@@ -36,7 +44,7 @@
           CURRENT TRAIN SCHEDULE
         </div>
         <div class="card-body">
-          <table class="table">
+          <table class="table table-hover" id="train-table">
             <thead>
               <tr>
                 <th scope="col">Train Name</th>
@@ -87,19 +95,6 @@
       </div>
     </div>
 
-    <!-- JavaScript -->
-
-    <!-- jQuery reference -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- FIREBASE References -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-
-    <!-- Moment.js reference -->
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="trainTime.js"></script>
   </body>
 </html>
