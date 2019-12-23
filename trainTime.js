@@ -86,3 +86,16 @@ trainData.ref().on("child_added", function(snapshot) {
       "</td></tr>"
   );
 });
+
+
+// displays current time
+function clock() {
+  let clock = moment().format("h:mm:ss a")
+  $("#clock").text("Current Time: " + clock);
+  // updates clock every second
+  setInterval(function () {
+      this.clock();
+  }, 1000);
+}
+
+clock();
