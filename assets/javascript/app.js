@@ -20,10 +20,10 @@ $(function(){
    
      database.ref().push(newTrain);
    
-     console.log(newTrain.name);
-     console.log(newTrain.destination);
-     console.log(newTrain.first);
-     console.log(newTrain.frequency);
+     //console.log(newTrain.name);
+     //console.log(newTrain.destination);
+     //console.log(newTrain.first);
+     //console.log(newTrain.frequency);
    
      $("train-name-input").val("");
      $("destination-input").val("");
@@ -33,24 +33,24 @@ $(function(){
     });
    
  database.ref().on("child_added", function(childSnapshot) {
-       console.log(childSnapshot.val());
+       //console.log(childSnapshot.val());
        var trainNameInput = childSnapshot.val().name;
        var destinationInput = childSnapshot.val().destination;
        var firstTrainInput = childSnapshot.val().first;
        var frequencyInput = childSnapshot.val().frequency;
    
        var firstTimeConverted = moment(firstTrain, "HH:mm").subtract(1, "years");
-       console.log(firstTimeConverted);
+       //console.log(firstTimeConverted);
        var currentTime = moment();
-       console.log("CURRENT TIME:" + moment(currentTime).format("HH:mm"));
+       //console.log("CURRENT TIME:" + moment(currentTime).format("HH:mm"));
        var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-       console.log("DIFFERENCE IN TIME:" + diffTime);
+       //console.log("DIFFERENCE IN TIME:" + diffTime);
        var tRemainder = diffTime % frequency;
-       console.log(tRemainder);
+       //console.log(tRemainder);
        var tMinutesTillTrain = frequency - tRemainder;
-       console.log("MINUTES TILL TRAIN:" + tMinutesTillTrain);
+       //console.log("MINUTES TILL TRAIN:" + tMinutesTillTrain);
        var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("HH:mm");
-       console.log("ARRIVAL TIME:" + moment(nextTrain).format("HH:mm");
+       //console.log("ARRIVAL TIME:" + moment(nextTrain).format("HH:mm"));
    
        var newRow = $("<tr>").append(
            $("<td>").text(trainNameInput),
@@ -61,5 +61,5 @@ $(function(){
         );
    
        $("#mytable > tbody").append(newRow);
-    
     });
+});
