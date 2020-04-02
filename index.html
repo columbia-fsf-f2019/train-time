@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Train Time</title>
+    <!-- BOOTSTRAP CSS reference -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- jQuery Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- FIREBASE Reference -->
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- MOMENT.js reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </head>
+  <body>
+    <!-- begin by wrapping everything in a container, JUMBOTRON within -->
+    <div class="container">
+      <div
+        class="jumbotron"
+        style="background-color: maroon; color: white; text-align: center;"
+      >
+        <h1>Step onto the soul train!</h1>
+        <h3>(NEVER miss your train again!)</h3>
+        <br />
+        <h4 id="clock">Your local time is:</h4>
+      </div>
+
+      <!-- CARD below contains a TABLE with categories at the top of each column -->
+      <div class="card mb-4">
+        <div
+          class="card-header"
+          style="background-color: #0076ff; color: #ffffff;"
+        >
+          CURRENT TRAIN SCHEDULE
+        </div>
+        <div class="card-body">
+          <table class="table table-hover" id="train-table">
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CARD below contains a FORM with inputs -->
+      <div class="card">
+        <div
+          class="card-header"
+          style="background-color:#0076ff; color: #ffffff;"
+        >
+          ADD TRAIN
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="train-name-input">Train Name</label>
+              <input type="text" class="form-control" id="train-name-input" />
+            </div>
+            <div class="form-group">
+              <label for="destination-input">Destination</label>
+              <input type="text" class="form-control" id="destination-input" />
+            </div>
+            <div class="form-group">
+              <label for="train-time-input"
+                >First Train Time (HH:mm - Military Time)</label
+              >
+              <input type="time" class="form-control" id="train-time-input" />
+            </div>
+            <div class="form-group">
+              <label for="frequency-input">Frequency (min)</label>
+              <input type="number" class="form-control" id="frequency-input" />
+            </div>
+            <button id="add-train-btn" type="submit" class="btn btn-primary">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="trainTime.js"></script>
+  </body>
+</html>
